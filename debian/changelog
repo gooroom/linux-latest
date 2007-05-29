@@ -1,8 +1,8 @@
-linux-latest-2.6 (6etch1) stable; urgency=high
+linux-latest-2.6 (6lenny1) testing; urgency=high
 
   * Update to 2.6.18-5.
 
- -- dann frazier <dannf@debian.org>  Thu, 24 May 2007 17:05:09 -0600
+ -- dann frazier <dannf@debian.org>  Tue, 29 May 2007 09:33:47 -0600
 
 linux-latest-2.6 (6) unstable; urgency=low
 
