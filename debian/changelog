@@ -1,3 +1,12 @@
+linux-latest-2.6 (6etch2) stable-security; urgency=high
+
+  * The arm build of 6etch1 is missing from 4.0r1.
+    Since the latest security update of linux-2.6 (2.6.18.dfsg.1-13etch1)
+    requires this new ABI, and an updated linux-latest-2.6 facilitates the
+    migration to the new ABI. Closes: #438617
+
+ -- dann frazier <dannf@debian.org>  Mon, 20 Aug 2007 17:01:18 -0600
+
 linux-latest-2.6 (6etch1) stable; urgency=high
 
   * Update to 2.6.18-5.
