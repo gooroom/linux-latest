@@ -1,3 +1,9 @@
+linux-latest-2.6 (6etch3) stable-security; urgency=high
+
+  * Update to 2.6.18-6.
+
+ -- dann frazier <dannf@debian.org>  Tue, 22 Jan 2008 22:47:16 -0700
+
 linux-latest-2.6 (6etch2) stable-security; urgency=high
 
   * The arm build of 6etch1 is missing from 4.0r1.
