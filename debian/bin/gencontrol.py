@@ -16,6 +16,7 @@ class Gencontrol(Base):
         self.version = VersionLinux(config_entry['source'])
         self.abiname = config_entry['abiname']
         self.vars = self.process_version_linux(self.version, self.abiname)
+        self.vars['extraversion'] = '-etchnhalf'
 
         changelog_version = Changelog()[0].version
         self.package_version = '%s+%s' % (self.version.upstream, changelog_version.complete)

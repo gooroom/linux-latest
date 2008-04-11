@@ -1,3 +1,12 @@
+linux-latest-2.6-etchnhalf (13~etchnhalf.1) UNRELEASED; urgency=low
+
+  * Branch and rename source for etchnhalf.
+  * Drop transitional packages. Existing etch users should not migrate
+    to etchnhalf kernels automatically.
+  * Add extraversion to templates to provide 'etchnhalf' string.
+
+ -- dann frazier <dannf@debian.org>  Fri, 11 Apr 2008 13:30:19 -0600
+
 linux-latest-2.6 (13) unstable; urgency=low
 
   * Add transitional packages for k7.
