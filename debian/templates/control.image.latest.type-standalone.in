@@ -1,4 +1,4 @@
-Package: linux-image-@major@@extraversion@@localversion@
+Package: linux-image-@major@@localversion@@extraversion@
 Section: admin
 Priority: optional
 Depends: linux-image-@upstreamversion@@abiname@@localversion@

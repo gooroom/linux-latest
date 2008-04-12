@@ -1,7 +1,7 @@
-Package: linux-image-@major@@extraversion@@localversion@
+Package: linux-image-@major@@localversion@@extraversion@
 Section: admin
 Priority: optional
-Depends: linux-image-@upstreamversion@@abiname@@localversion@, linux-modules-@major@@extraversion@@localversion@
+Depends: linux-image-@upstreamversion@@abiname@@localversion@, linux-modules-@major@@localversion@@extraversion@
 Description: Linux @major@@extraversion@ image on @class@
  This package depends on the latest binary image for Linux kernel @major@@extraversion@
  on @longclass@ machines.
@@ -9,12 +9,12 @@ Description: Linux @major@@extraversion@ image on @class@
 Package: linux-modules@localversion@
 Section: admin
 Priority: optional
-Depends: linux-modules-@major@@extraversion@@localversion@
+Depends: linux-modules-@major@@localversion@@extraversion@
 Description: Linux modules on @class@
  This package depends on the latest pre-built loadable modules for Linux kernel
  on @longclass@ machines.
 
-Package: linux-modules-@major@@extraversion@@localversion@
+Package: linux-modules-@major@@localversion@@extraversion@
 Section: admin
 Priority: optional
 Depends: linux-modules-@upstreamversion@@abiname@@localversion@

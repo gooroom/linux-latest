@@ -1,4 +1,4 @@
-Package: linux-headers-@major@@extraversion@@localversion@
+Package: linux-headers-@major@@localversion@@extraversion@
 Section: devel
 Priority: optional
 Depends: linux-headers-@upstreamversion@@abiname@@localversion@
