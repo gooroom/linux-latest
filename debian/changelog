@@ -1,3 +1,9 @@
+linux-latest-2.6 (17+lenny1) stable; urgency=high
+
+  * Update to 2.6.26-2.
+
+ -- dann frazier <dannf@debian.org>  Tue, 24 Mar 2009 22:58:39 -0600
+
 linux-latest-2.6 (17) unstable; urgency=low
 
   * Use correct part of the config for image type.
