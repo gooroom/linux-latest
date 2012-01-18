@@ -8,6 +8,8 @@ from debian_linux.debian import Changelog, PackageDescription, VersionLinux
 from debian_linux.gencontrol import Gencontrol as Base
 from debian_linux.utils import Templates
 
+import os.path, re
+
 class Gencontrol(Base):
     def __init__(self, config):
         super(Gencontrol, self).__init__(ConfigCoreDump(fp = file(config)), Templates(["debian/templates"]))
@@ -19,29 +21,28 @@ class Gencontrol(Base):
             'upstreamversion': self.version.linux_upstream,
             'version': self.version.linux_version,
             'source_upstream': self.version.upstream,
-            'major': self.version.linux_major,
             'abiname': self.abiname,
         }
 
         changelog_version = Changelog()[0].version
-        self.package_version = '%s+%s' % (self.version.upstream, changelog_version.complete)
+        self.package_version = '%s+%s' % (self.version.linux_version, changelog_version.complete)
 
     def do_main_setup(self, vars, makeflags, extra):
         makeflags['GENCONTROL_ARGS'] = '-v%s' % self.package_version
 
     def do_main_packages(self, packages, vars, makeflags, extra):
         packages['source']['Build-Depends'].extend(
-            ['linux-support-%s%s' % (self.version.linux_upstream, self.abiname)]
+            ['linux-support-%s' % self.abiname]
         )
 
-        latest_source = self.templates["control.source.latest"][0]
-        packages.append(self.process_package(latest_source, vars))
+        latest_source = self.templates["control.source.latest"]
+        packages.extend(self.process_packages(latest_source, vars))
 
-        latest_doc = self.templates["control.doc.latest"][0]
-        packages.append(self.process_package(latest_doc, vars))
+        latest_doc = self.templates["control.doc.latest"]
+        packages.extend(self.process_packages(latest_doc, vars))
 
-        latest_tools = self.templates["control.tools.latest"][0]
-        packages.append(self.process_package(latest_tools, vars))
+        latest_tools = self.templates["control.tools.latest"]
+        packages.extend(self.process_packages(latest_tools, vars))
 
     def do_flavour_packages(self, packages, makefile, arch, featureset, flavour, vars, makeflags, extra):
         if self.version.linux_modifier is None:
@@ -55,6 +56,7 @@ class Gencontrol(Base):
         config_description = self.config.merge('description', arch, featureset, flavour)
         config_image = self.config.merge('image', arch, featureset, flavour)
 
+        vars['flavour'] = vars['localversion'][1:]
         vars['class'] = config_description['hardware']
         vars['longclass'] = config_description.get('hardware-long') or vars['class']
 
@@ -64,8 +66,6 @@ class Gencontrol(Base):
             templates.extend(self.templates["control.image.latest.type-modules"])
         else:
             templates.extend(self.templates["control.image.latest.type-standalone"])
-        if featureset == 'xen':
-            templates.extend(self.templates["control.xen-linux-system.latest"])
         if config_base.get('modules', True):
             templates.extend(self.templates["control.headers.latest"])
 
@@ -81,11 +81,13 @@ class Gencontrol(Base):
                 desc.append(config_description['part-long-' + part])
                 desc.append_short(config_description.get('part-short-' + part, ''))
 
+            if 'xen' in desc_parts:
+                templates.extend(self.templates["control.xen-linux-system.latest"])
+
         packages_dummy = []
 
         packages_dummy.append(self.process_real_image(templates[0], image_fields, vars))
-        packages_dummy.append(self.process_real_image(templates[1], image_fields, vars))
-        packages_dummy.extend(self.process_packages(templates[2:], vars))
+        packages_dummy.extend(self.process_packages(templates[1:], vars))
 
         for package in packages_dummy:
             name = package['Package']
@@ -98,9 +100,9 @@ class Gencontrol(Base):
 
         makeflags['GENCONTROL_ARGS'] = '-v%s' % self.package_version
 
-        cmds_binary_arch = ["ln -sf linux-image.NEWS debian/%s.NEWS" % i['Package']
-                            for i in packages_dummy
-                            if i['Package'].startswith('linux-image-')]
+        cmds_binary_arch = []
+        for i in packages_dummy:
+            cmds_binary_arch += self.get_link_commands(i, ['NEWS'])
         cmds_binary_arch += ["$(MAKE) -f debian/rules.real install-dummy DH_OPTIONS='%s' %s" % (' '.join(["-p%s" % i['Package'] for i in packages_dummy]), makeflags)]
         makefile.add('binary-arch_%s_%s_%s_real' % (arch, featureset, flavour), cmds = cmds_binary_arch)
 
@@ -130,6 +132,7 @@ class Gencontrol(Base):
                     version = '-v1:%s' % self.package_version
                 else:
                     version = '-v%s' % self.package_version
+                cmds += self.get_link_commands(i, ['config', 'postinst', 'templates'])
                 cmds.append("$(MAKE) -f debian/rules.real install-dummy ARCH='%s' DH_OPTIONS='-p%s' GENCONTROL_ARGS='%s'" % (arch, i['Package'], version))
             makefile.add('binary-arch_%s' % arch, ['binary-arch_%s_extra' % arch])
             makefile.add("binary-arch_%s_extra" % arch, cmds = cmds)
@@ -143,6 +146,27 @@ class Gencontrol(Base):
             elif value:
                 entry[key] = value
         return entry
+
+    @staticmethod
+    def get_link_commands(package, names):
+        cmds = []
+        for name in names:
+            match = re.match(r'^(linux-\w+)(-2.6)?(-.*)$', package['Package'])
+            if not match:
+                continue
+            if match.group(2):
+                source = 'debian/%s%s.%s' % (match.group(1), match.group(3),
+                                             name)
+            else:
+                source = None
+            if not (source and os.path.isfile(source)):
+                source = 'debian/%s.%s' % (match.group(1), name)
+            dest = 'debian/%s.%s' % (package['Package'], name)
+            if (os.path.isfile(source) and
+                (not os.path.isfile(dest) or os.path.islink(dest))):
+                cmds.append('ln -sf %s %s' %
+                            (os.path.relpath(source, 'debian'), dest))
+        return cmds
 
 if __name__ == '__main__':
     Gencontrol(sys.argv[1] + "/config.defines.dump")()
