@@ -1,9 +1,26 @@
-linux-latest (52~bpo70+1) wheezy-backports; urgency=low
+linux-latest (54~bpo70+1) wheezy-backports; urgency=low
 
   * Rebuild for wheezy:
-    - ABI version is 0.bpo.3, not 3
+    - ABI version is 0.bpo.2, not 2
 
- -- Ben Hutchings <ben@decadent.org.uk>  Sun, 29 Sep 2013 19:05:15 +0100
+ -- Ben Hutchings <ben@decadent.org.uk>  Thu, 21 Nov 2013 02:10:25 +0000
+
+linux-latest (54) unstable; urgency=low
+
+  * Update to 3.11-2
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Wed, 13 Nov 2013 03:30:59 +0000
+
+linux-latest (53) unstable; urgency=low
+
+  * Add linux-image-<flavour>-dbg metapackages, providing the virtual
+    package linux-latest-image-dbg
+  * Update standards-version to 3.9.4; no changes required
+  * Change section and priority fields to match archive overrides
+  * Update to 3.11-1
+  * Stop providing virtual package linux-headers
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sat, 19 Oct 2013 00:44:20 +0100
 
 linux-latest (52) unstable; urgency=low
 

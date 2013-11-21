@@ -66,6 +66,9 @@ class Gencontrol(Base):
         if self.config.get_merge('build', arch, featureset, flavour,
                                  'modules', True):
             templates.extend(self.templates["control.headers.latest"])
+        if self.config.get_merge('build', arch, featureset, flavour,
+                                 'debug-info', False):
+            templates.extend(self.templates["control.image-dbg.latest"])
 
         image_fields = {'Description': PackageDescription()}
 
@@ -79,7 +82,7 @@ class Gencontrol(Base):
                 desc.append(config_description['part-long-' + part])
                 desc.append_short(config_description.get('part-short-' + part, ''))
 
-            if u'xen' in desc_parts:
+            if self.config.merge('xen', arch, featureset, flavour):
                 templates.extend(self.templates["control.xen-linux-system.latest"])
 
         packages_dummy = []
@@ -104,11 +107,11 @@ class Gencontrol(Base):
         cmds_binary_arch += ["$(MAKE) -f debian/rules.real install-dummy DH_OPTIONS='%s' %s" % (u' '.join([u"-p%s" % i['Package'] for i in packages_dummy]), makeflags)]
         makefile.add('binary-arch_%s_%s_%s_real' % (arch, featureset, flavour), cmds = cmds_binary_arch)
 
-        for i in packages_dummy:
-            if i['Package'].startswith(u'linux-image-'):
-                bug_presubj = self.substitute(
-                    self.templates["bug-presubj.image.latest"], vars)
-                codecs.open("debian/%s.bug-presubj" % i['Package'], 'w', 'utf-8').write(bug_presubj)
+        # linux-image meta-packages include a bug presubj message
+        # directing reporters to the real image package.
+        bug_presubj = self.substitute(
+            self.templates["bug-presubj.image.latest"], vars)
+        codecs.open("debian/%s.bug-presubj" % packages_dummy[0]['Package'], 'w', 'utf-8').write(bug_presubj)
 
     def do_extra(self, packages, makefile):
         templates_extra = self.templates["control.extra"]
