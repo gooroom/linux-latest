@@ -1,9 +1,15 @@
-linux-latest (55~bpo70+1) wheezy-backports; urgency=low
+linux-latest (56~bpo70+1) wheezy-backports; urgency=low
 
   * Rebuild for wheezy:
     - ABI version is 0.bpo.1, not 1
 
- -- Ben Hutchings <ben@decadent.org.uk>  Wed, 08 Jan 2014 02:47:50 +0000
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun, 16 Mar 2014 16:01:32 +0000
+
+linux-latest (56) unstable; urgency=medium
+
+  * Update to 3.13-1
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sat, 22 Feb 2014 14:49:52 +0000
 
 linux-latest (55) unstable; urgency=low
 
