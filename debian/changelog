@@ -1,9 +1,21 @@
-linux-latest (57~bpo70+1) wheezy-backports; urgency=low
+linux-latest (59~bpo70+1) wheezy-backports; urgency=low
 
   * Rebuild for wheezy:
-    - ABI version is 0.bpo.1, not 1
+    - ABI version is 0.bpo.2, not 2
 
- -- Ben Hutchings <ben@decadent.org.uk>  Wed, 14 May 2014 13:29:55 +0100
+ -- Ben Hutchings <ben@decadent.org.uk>  Thu, 31 Jul 2014 20:41:18 +0100
+
+linux-latest (59) unstable; urgency=medium
+
+  * Update to 3.14-2
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Mon, 21 Jul 2014 22:06:07 +0100
+
+linux-latest (58) unstable; urgency=medium
+
+  * Rebuild to include arm64 and ppc64el architectures
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Mon, 07 Jul 2014 18:38:21 +0100
 
 linux-latest (57) unstable; urgency=medium
 
