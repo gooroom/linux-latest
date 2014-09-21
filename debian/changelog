@@ -1,9 +1,23 @@
-linux-latest (59~bpo70+1) wheezy-backports; urgency=low
+linux-latest (61~bpo70+1) wheezy-backports; urgency=low
 
   * Rebuild for wheezy:
     - ABI version is 0.bpo.2, not 2
 
- -- Ben Hutchings <ben@decadent.org.uk>  Thu, 31 Jul 2014 20:41:18 +0100
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun, 21 Sep 2014 19:23:08 +0100
+
+linux-latest (61) unstable; urgency=medium
+
+  * Update to 3.16-2
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Fri, 19 Sep 2014 02:08:37 +0100
+
+linux-latest (60) unstable; urgency=medium
+
+  * linux-image-{686-pae,amd64}: Add backdated NEWS for introduction of
+    xz compression affecting Xen (Closes: #727736)
+  * Update to 3.16-1
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Mon, 08 Sep 2014 20:23:42 +0100
 
 linux-latest (59) unstable; urgency=medium
 
