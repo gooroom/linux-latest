@@ -1,3 +1,10 @@
+linux-latest (67~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+  * Update to 4.1.0-0.bpo.2
+
+ -- Hector Oron <zumbi@debian.org>  Fri, 21 Aug 2015 23:37:16 +0200
+
 linux-latest (67) unstable; urgency=medium
 
   * Adjust for migration to git:
