@@ -1,9 +1,9 @@
-linux-latest (67~bpo8+1) jessie-backports; urgency=medium
+linux-latest (68) unstable; urgency=medium
 
-  * Rebuild for jessie-backports.
-  * Update to 4.1.0-0.bpo.2
+  * Update to 4.2.0-1
+  * debian/bin/gencontrol.py: Use Python 3
 
- -- Hector Oron <zumbi@debian.org>  Fri, 21 Aug 2015 23:37:16 +0200
+ -- Ben Hutchings <ben@decadent.org.uk>  Sat, 26 Sep 2015 01:00:30 +0100
 
 linux-latest (67) unstable; urgency=medium
 
