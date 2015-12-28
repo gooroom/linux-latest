@@ -1,3 +1,10 @@
+linux-latest (70~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+  * d/rules.defs: update kernel version ABI to 0.bpo.1
+
+ -- Héctor Orón Martínez <zumbi@debian.org>  Mon, 28 Dec 2015 12:54:41 +0100
+
 linux-latest (70) unstable; urgency=medium
 
   * Change linux-{image,headers}-586 to transitional packages
