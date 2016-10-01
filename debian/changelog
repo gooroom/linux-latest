@@ -1,3 +1,9 @@
+linux-latest (80+deb9u1) stretch; urgency=medium
+
+  * Revert changes to debug symbol meta-packages (Closes: #866691)
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sat, 01 Jul 2017 01:31:49 +0100
+
 linux-latest (80) unstable; urgency=medium
 
   * Re-introduce xen-linux-system-amd64 *again* as transitional package
