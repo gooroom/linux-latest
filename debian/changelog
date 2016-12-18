@@ -1,4 +1,4 @@
-linux-latest (78~bpo8+1) jessie-backports; urgency=medium
+linux-latest (77~bpo8+1) jessie-backports; urgency=medium
 
   * Rebuild for jessie-backports.
   * d/rules.defs: update kernel version ABI to 0.bpo.2
