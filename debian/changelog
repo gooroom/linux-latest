@@ -1,3 +1,10 @@
+linux-latest (78~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+  * d/rules.defs: update kernel version ABI to 0.bpo.1
+
+ -- Héctor Orón Martínez <zumbi@debian.org>  Wed, 01 Feb 2017 10:34:11 +0100
+
 linux-latest (78) unstable; urgency=medium
 
   * debian/rules: Use dpkg-parsechangelog -S option to select fields
