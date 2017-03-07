@@ -1,9 +1,8 @@
-linux-latest (78~bpo8+1) jessie-backports; urgency=medium
+linux-latest (79) unstable; urgency=medium
 
-  * Rebuild for jessie-backports.
-  * d/rules.defs: update kernel version ABI to 0.bpo.1
+  * Update to 4.9.0-2
 
- -- Héctor Orón Martínez <zumbi@debian.org>  Wed, 01 Feb 2017 10:34:11 +0100
+ -- Ben Hutchings <ben@decadent.org.uk>  Sat, 18 Feb 2017 17:03:12 +0000
 
 linux-latest (78) unstable; urgency=medium
 
