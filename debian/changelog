@@ -1,9 +1,17 @@
-linux-latest (79~bpo8+1) jessie-backports; urgency=medium
+linux-latest (80~bpo8+1) jessie-backports; urgency=medium
 
   * Rebuild for jessie-backports.
-  * d/rules.defs: update kernel version ABI to 0.bpo.2
+  * d/rules.defs: update kernel version ABI to 0.bpo.3
 
- -- Héctor Orón Martínez <zumbi@debian.org>  Tue, 07 Mar 2017 11:26:14 +0100
+ -- Héctor Orón Martínez <zumbi@debian.org>  Mon, 22 May 2017 11:49:20 +0200
+
+linux-latest (80) unstable; urgency=medium
+
+  * Re-introduce xen-linux-system-amd64 *again* as transitional package
+    (Closes: #857039)
+  * Update to 4.9.0-3
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Thu, 04 May 2017 16:33:51 +0100
 
 linux-latest (79) unstable; urgency=medium
 
