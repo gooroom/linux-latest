@@ -1,3 +1,9 @@
+linux-latest (63+deb8u1) jessie-security; urgency=medium
+
+  * Update to 3.16.0-5
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Tue, 09 Jan 2018 00:42:09 +0000
+
 linux-latest (63) unstable; urgency=medium
 
   * Update to 3.16.0-4
