@@ -1,3 +1,9 @@
+linux-latest (80+deb9u4) UNRELEASED; urgency=medium
+
+  * Update to 4.9.0-6
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 20 Feb 2018 10:27:46 +0100
+
 linux-latest (80+deb9u3) stretch-security; urgency=high
 
   * Update to 4.9.0-5
