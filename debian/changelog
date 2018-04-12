@@ -1,3 +1,26 @@
+linux-latest (91~bpo9+1) stretch-backports; urgency=medium
+
+  * Rebuild for stretch-backports:
+    - ABI version is 0.bpo.2, not 2
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Thu, 12 Apr 2018 19:12:08 +0100
+
+linux-latest (91) unstable; urgency=medium
+
+  [ Ben Hutchings ]
+  * debian/control: Point Vcs URLs to Salsa
+
+  [ Salvatore Bonaccorso ]
+  * Update to 4.15.0-2
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 24 Mar 2018 21:38:00 +0100
+
+linux-latest (90) unstable; urgency=medium
+
+  * Update to 4.15.0-1
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 20 Feb 2018 21:56:32 +0100
+
 linux-latest (89~bpo9+1) stretch-backports; urgency=medium
 
   * Rebuild for stretch-backports:
