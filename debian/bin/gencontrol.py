@@ -30,12 +30,22 @@ class Gencontrol(Base):
         changelog_version = Changelog()[0].version
         self.package_version = '%s+%s' % (self.version.linux_version, changelog_version.complete)
 
+        # We should only build the arch-indep metapackages if their
+        # names won't exactly match the packages they depend on
+        self.build_arch_indep = (self.vars['source_suffix'] !=
+                                 '-' + self.version.linux_upstream)
+
     def do_main_setup(self, vars, makeflags, extra):
         makeflags['GENCONTROL_ARGS'] = '-v%s' % self.package_version
 
         # A line will be appended to this for each image-dbg package.
         # Start with an empty file.
         open('debian/source.lintian-overrides', 'w').close()
+
+    def do_main_makefile(self, makefile, makeflags, extra):
+        makefile.add('build-indep', cmds=["$(MAKE) -f debian/rules.real build-indep %s" % makeflags])
+        if self.build_arch_indep:
+            makefile.add('binary-indep', cmds=["$(MAKE) -f debian/rules.real binary-indep %s" % makeflags])
 
     def do_main_packages(self, packages, vars, makeflags, extra):
         packages['source']['Build-Depends'].extend(
@@ -46,9 +56,7 @@ class Gencontrol(Base):
              'linux-headers-%s-all' % self.abiname]
         )
 
-        # Only build these metapackages if their names won't exactly match
-        # the packages they depend on
-        if vars['source_suffix'] != '-' + vars['upstreamversion']:
+        if self.build_arch_indep:
             latest_source = self.templates["control.source.latest"]
             packages.extend(self.process_packages(latest_source, vars))
 
