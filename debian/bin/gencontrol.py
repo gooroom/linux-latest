@@ -96,8 +96,8 @@ class Gencontrol(Base):
             makeflags['DEBUG'] = True
             templates.extend(self.templates["control.image-dbg.latest"])
             substitute_file('lintian-overrides.image-dbg',
-                            'debian/linux-image-%s-dbg.lintian-overrides' %
-                            vars['flavour'])
+                            'debian/linux-image%s-%s-dbg.lintian-overrides' %
+                            (vars['source_suffix'], vars['flavour']))
             substitute_file('lintian-overrides.source',
                             'debian/source.lintian-overrides',
                             append=True)
