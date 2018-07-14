@@ -54,7 +54,7 @@ install-perf:
 install-flavour:
 	dh_testdir
 	dh_testroot
-	$(MAKE) -f debian/rules.real install-base DH_OPTIONS='-plinux-image$(LOCALVERSION) -plinux-headers$(LOCALVERSION)'
+	$(MAKE) -f debian/rules.real install-base DH_OPTIONS='-plinux-image$(SOURCE_SUFFIX)$(LOCALVERSION) -plinux-headers$(SOURCE_SUFFIX)$(LOCALVERSION)'
 ifeq ($(DEBUG),True)
-	$(MAKE) -f debian/rules.real install-base DH_OPTIONS='-plinux-image$(LOCALVERSION)-dbg'
+	$(MAKE) -f debian/rules.real install-base DH_OPTIONS='-plinux-image$(SOURCE_SUFFIX)$(LOCALVERSION)-dbg'
 endif
