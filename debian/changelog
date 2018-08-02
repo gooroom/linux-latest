@@ -1,3 +1,17 @@
+linux-latest (95~bpo9+1) stretch-backports; urgency=medium
+
+  * Rebuild for stretch-backports:
+    - ABI version is 0.bpo.1, not 1
+
+ -- Bastian Blank <waldi@debian.org>  Thu, 02 Aug 2018 13:29:54 +0200
+
+linux-latest (95) unstable; urgency=medium
+
+  [ Romain Perier ]
+  * Update to 4.17.0-1
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Tue, 17 Jul 2018 01:07:23 +0100
+
 linux-latest (94~bpo9+1) stretch-backports; urgency=medium
 
   * Rebuild for stretch-backports:
