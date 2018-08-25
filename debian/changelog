@@ -1,3 +1,16 @@
+linux-latest-4.9 (80+deb9u6~deb8u1) jessie-security; urgency=medium
+
+  * Backport to jessie:
+    - ABI version is 0.bpo.8, not 8
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sat, 25 Aug 2018 01:47:30 +0100
+
+linux-latest (80+deb9u6) stretch-security; urgency=high
+
+  * Update to 4.9.0-8
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 19 Aug 2018 20:28:09 +0200
+
 linux-latest-4.9 (80+deb9u5~deb8u1) jessie-security; urgency=high
 
   * Backport to jessie:
