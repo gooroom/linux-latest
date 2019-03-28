@@ -6,6 +6,7 @@ linux-latest (63+deb8u4) UNRELEASED; urgency=medium
   * Change source format to 3.0 (native) so that .git directory is excluded
     by default
   * debian/control: Point Vcs URLs to Salsa
+  * Update to 3.16.0-8
 
  -- Ben Hutchings <ben@decadent.org.uk>  Thu, 04 Oct 2018 17:29:26 +0100
 
