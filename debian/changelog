@@ -1,3 +1,9 @@
+linux-latest (105+grm2u1) gooroom-2.0; urgency=medium
+
+  * Supported linux-image-$KERNELVERSION-unsigned-$arch
+
+ -- jongkyung.woo <jkwoo@gooroom.kr>  Fri, 12 Jul 2019 08:36:49 +0900
+
 linux-latest (105) unstable; urgency=medium
 
   * Update to 4.19.0-5
