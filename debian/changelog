@@ -1,3 +1,9 @@
+linux-latest (80+deb9u8) UNRELEASED; urgency=medium
+
+  * Update to 4.9.0-10
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 18 Jul 2019 07:29:09 +0200
+
 linux-latest (80+deb9u7) stretch; urgency=medium
 
   * Update to 4.9.0-9
