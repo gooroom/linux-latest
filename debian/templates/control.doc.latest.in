@@ -1,4 +1,4 @@
-Package: linux-doc@source_suffix@
+Package: linux-doc
 Section: doc
 Architecture: all
 Depends: linux-doc-@upstreamversion@, ${misc:Depends}

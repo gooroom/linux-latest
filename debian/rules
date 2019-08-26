@@ -44,8 +44,6 @@ else
 	grep -v debian/changelog debian/control.md5sum | md5sum --check - --status || \
 		$(MAKE) -f debian/rules debian/control-real
 endif
-	sed -i -e "s@linux-image-$(KERNELVERSION)-amd64@linux-image-$(KERNELVERSION)-unsigned-amd64@g" \
-               debian/control
 
 debian/control-real: $(GENCONTROL) $(CONTROL_FILES)
 	$(GENCONTROL) /usr/src/linux-support-$(KERNELVERSION)
