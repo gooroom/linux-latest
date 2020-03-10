@@ -1,3 +1,16 @@
+linux-latest-4.9 (80+deb9u10~deb8u1) jessie-security; urgency=medium
+
+  * Backport to jessie:
+    - ABI version is 0.bpo.12, not 12
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Tue, 10 Mar 2020 18:54:13 +0000
+
+linux-latest (80+deb9u10) stretch; urgency=medium
+
+  * Update to 4.9.0-12
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 28 Jan 2020 06:45:30 +0100
+
 linux-latest-4.9 (80+deb9u9~deb8u1) jessie-security; urgency=medium
 
   * Backport to jessie:
