@@ -1,3 +1,10 @@
+linux-latest (105+deb10u4+grm2u1) gooroom-2.0; urgency=medium
+
+  * Merge 105+deb10u4 into gooroom-2.0
+  * Supported linux-image-$KERNELVERISON-unsigned-$arch
+
+ -- jongkyung.woo <jkwoo@gooroom.kr>  Wed, 17 Jun 2020 19:55:34 +0900
+
 linux-latest (105+deb10u4) buster; urgency=medium
 
   * Update to 4.19.0-9
