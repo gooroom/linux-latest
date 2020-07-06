@@ -1,3 +1,9 @@
+linux-latest (80+deb9u11) stretch; urgency=medium
+
+  * Update to 4.9.0-13
+
+ -- Ben Hutchings <benh@debian.org>  Mon, 06 Jul 2020 01:06:18 +0100
+
 linux-latest (80+deb9u10) stretch; urgency=medium
 
   * Update to 4.9.0-12
