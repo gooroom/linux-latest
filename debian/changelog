@@ -1,8 +1,8 @@
-linux-latest (105+deb10u5) UNRELEASED; urgency=medium
+linux-latest (105+deb10u5) buster; urgency=medium
 
   * Update to 4.19.0-10
 
- -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 09 Jul 2020 21:42:26 +0200
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 09 Jul 2020 21:58:28 +0200
 
 linux-latest (105+deb10u4) buster; urgency=medium
 
