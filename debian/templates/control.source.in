@@ -1,4 +1,3 @@
-Source: linux-latest
 Section: kernel
 Priority: optional
 Maintainer: Debian Kernel Team <debian-kernel@lists.debian.org>

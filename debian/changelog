@@ -1,4 +1,4 @@
-linux-latest (105+deb10u5~deb9+1) UNRELEASED; urgency=medium
+linux-latest-4.19 (105+deb10u5~deb9u1) UNRELEASED; urgency=medium
 
   * Rebuild for stretch:
     - ABI version is 0.bpo.10, not 10
