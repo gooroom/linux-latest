@@ -1,3 +1,16 @@
+linux-latest (105+deb10u5~deb9+1) UNRELEASED; urgency=medium
+
+  * Rebuild for stretch:
+    - ABI version is 0.bpo.10, not 10
+
+ -- Ben Hutchings <benh@debian.org>  Wed, 20 May 2020 15:03:00 +0100
+
+linux-latest (105+deb10u5) buster; urgency=medium
+
+  * Update to 4.19.0-10
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 09 Jul 2020 21:58:28 +0200
+
 linux-latest (105+deb10u4~bpo9+1) stretch-backports; urgency=medium
 
   * Rebuild for stretch-backports:
