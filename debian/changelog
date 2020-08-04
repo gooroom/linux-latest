@@ -2,6 +2,7 @@ linux-latest-4.19 (105+deb10u5~deb9u1) UNRELEASED; urgency=medium
 
   * Rebuild for stretch:
     - ABI version is 0.bpo.10, not 10
+    - Disable building linux-doc, linux-source, linux-tools packages
 
  -- Ben Hutchings <benh@debian.org>  Wed, 20 May 2020 15:03:00 +0100
 
