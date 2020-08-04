@@ -1,10 +1,10 @@
-linux-latest-4.19 (105+deb10u5~deb9u1) UNRELEASED; urgency=medium
+linux-latest-4.19 (105+deb10u5~deb9u1) stretch-security; urgency=high
 
   * Rebuild for stretch:
     - ABI version is 0.bpo.10, not 10
     - Disable building linux-doc, linux-source, linux-tools packages
 
- -- Ben Hutchings <benh@debian.org>  Wed, 20 May 2020 15:03:00 +0100
+ -- Ben Hutchings <benh@debian.org>  Tue, 04 Aug 2020 22:30:56 +0100
 
 linux-latest (105+deb10u5) buster; urgency=medium
 
