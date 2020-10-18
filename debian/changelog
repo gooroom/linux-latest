@@ -1,8 +1,38 @@
-linux-latest (105+deb10u1+grm2u1) gooroom-2.0; urgency=medium
+linux-latest (105+deb10u7) buster-security; urgency=high
 
-  * Supported linux-image-$KERNELVERSION-unsigned-$arch
+  * Update to 4.19.0-12
 
- -- jongkyung.woo <jkwoo@gooroom.kr>  Thu, 14 Nov 2019 10:19:44 +0900
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 18 Oct 2020 14:43:57 +0200
+
+linux-latest (105+deb10u6) buster; urgency=medium
+
+  * Update to 4.19.0-11
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 18 Sep 2020 20:48:30 +0200
+
+linux-latest (105+deb10u5) buster; urgency=medium
+
+  * Update to 4.19.0-10
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 09 Jul 2020 21:58:28 +0200
+
+linux-latest (105+deb10u4) buster; urgency=medium
+
+  * Update to 4.19.0-9
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Wed, 29 Apr 2020 16:16:38 +0200
+
+linux-latest (105+deb10u3) buster; urgency=medium
+
+  * Update to 4.19.0-8
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 31 Jan 2020 06:24:52 +0100
+
+linux-latest (105+deb10u2) buster; urgency=medium
+
+  * Update to 4.19.0-7
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 29 Dec 2019 22:39:49 +0100
 
 linux-latest (105+deb10u1) buster; urgency=medium
 
