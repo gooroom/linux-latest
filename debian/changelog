@@ -1,3 +1,27 @@
+linux-latest (105+deb10u7+grm2u1) gooroom-2.0; urgency=medium
+
+  * Merge 105+deb10u7 into gooroom-2.0
+
+ -- jongkyung.woo <jkwoo@gooroom.kr>  Fri, 30 Oct 2020 15:50:42 +0900
+
+linux-latest (105+deb10u7) buster-security; urgency=high
+
+  * Update to 4.19.0-12
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 18 Oct 2020 14:43:57 +0200
+
+linux-latest (105+deb10u6) buster; urgency=medium
+
+  * Update to 4.19.0-11
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 18 Sep 2020 20:48:30 +0200
+
+linux-latest (105+deb10u5) buster; urgency=medium
+
+  * Update to 4.19.0-10
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 09 Jul 2020 21:58:28 +0200
+
 linux-latest (105+deb10u4+grm2u1) gooroom-2.0; urgency=medium
 
   * Merge 105+deb10u4 into gooroom-2.0
