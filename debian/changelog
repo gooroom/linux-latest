@@ -1,3 +1,9 @@
+linux-latest (105+deb10u7+grm2u2) gooroom-2.0; urgency=medium
+
+  * Rebuild on 4.19.152-1+grm2u2
+
+ -- jongkyung.woo <jkwoo@gooroom.kr>  Sat, 14 Nov 2020 16:50:58 +0900
+
 linux-latest (105+deb10u7+grm2u1) gooroom-2.0; urgency=medium
 
   * Merge 105+deb10u7 into gooroom-2.0
