@@ -1,8 +1,8 @@
-linux-latest (105+deb10u9) UNRELEASED; urgency=medium
+linux-latest (105+deb10u9) buster-security; urgency=high
 
   * Update to 4.19.0-14
 
- -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 29 Jan 2021 23:26:59 +0100
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 30 Jan 2021 08:43:43 +0100
 
 linux-latest (105+deb10u8) buster; urgency=medium
 
