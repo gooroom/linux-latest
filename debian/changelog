@@ -1,3 +1,16 @@
+linux-latest-4.19 (105+deb10u9~deb9u1) stretch-security; urgency=high
+
+  * Rebuild for stretch:
+    - ABI version is 0.bpo.14, not 14
+
+ -- Ben Hutchings <benh@debian.org>  Mon, 08 Feb 2021 22:46:50 +0100
+
+linux-latest (105+deb10u9) buster-security; urgency=high
+
+  * Update to 4.19.0-14
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 30 Jan 2021 08:43:43 +0100
+
 linux-latest-4.19 (105+deb10u8~deb9u1) stretch-security; urgency=high
 
   * Rebuild for stretch:
