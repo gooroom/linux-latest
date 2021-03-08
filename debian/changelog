@@ -1,3 +1,9 @@
+linux-latest (80+deb9u13) stretch-security; urgency=medium
+
+  * Update to 4.9.0-15
+
+ -- Ben Hutchings <benh@debian.org>  Mon, 08 Mar 2021 17:51:18 +0100
+
 linux-latest (80+deb9u12) stretch-security; urgency=high
 
   * debian/control: Point Vcs URLs to Salsa
