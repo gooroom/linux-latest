@@ -1,3 +1,16 @@
+linux-latest-4.19 (105+deb10u12~deb9u1) stretch-security; urgency=high
+
+  * Rebuild for stretch:
+    - ABI version is 0.bpo.17, not 17
+
+ -- Ben Hutchings <benh@debian.org>  Tue, 22 Jun 2021 00:10:36 +0200
+
+linux-latest (105+deb10u12) buster; urgency=medium
+
+  * Update to 4.19.0-17
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 12 Jun 2021 07:16:00 +0200
+
 linux-latest-4.19 (105+deb10u11~deb9u1) stretch-security; urgency=high
 
   * Rebuild for stretch:
