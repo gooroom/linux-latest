@@ -3,7 +3,7 @@ linux-latest-4.19 (105+deb10u13~deb9u1) stretch-security; urgency=high
   * Rebuild for stretch:
     - ABI version is 0.bpo.18, not 18
 
- -- Ben Hutchings <benh@debian.org>  Tue, 22 Jun 2021 00:10:36 +0200
+ -- Ben Hutchings <benh@debian.org>  Tue, 12 Oct 2021 23:00:51 +0200
 
 linux-latest (105+deb10u13) buster; urgency=medium
 
