@@ -1,6 +1,7 @@
 linux-latest (105+deb10u14) UNRELEASED; urgency=medium
 
   * Update to 4.19.0-19
+  * linux-image: Add NEWS for unprivileged eBPF change
 
  -- Ben Hutchings <benh@debian.org>  Mon, 07 Mar 2022 22:40:26 +0100
 
