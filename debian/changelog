@@ -1,9 +1,9 @@
-linux-latest (80+deb9u16) UNRELEASED; urgency=medium
+linux-latest (80+deb9u16) stretch-security; urgency=high
 
   * Update to 4.9.0-18
   * linux-image: Add NEWS for unprivileged eBPF change
 
- -- Ben Hutchings <benh@debian.org>  Mon, 07 Mar 2022 22:14:34 +0100
+ -- Ben Hutchings <benh@debian.org>  Mon, 07 Mar 2022 22:38:56 +0100
 
 linux-latest (80+deb9u15) stretch-security; urgency=medium
 
