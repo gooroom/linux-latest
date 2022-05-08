@@ -1,3 +1,22 @@
+linux-latest (105+deb10u14+grm2u1) gooroom-2.0; urgency=medium
+
+  * Merge 105+deb10u14 into gooroom-2.0
+
+ -- jongkyung.woo <jkwoo@gooroom.kr>  Mon, 09 May 2022 08:46:27 +0900
+
+linux-latest (105+deb10u14) buster-security; urgency=high
+
+  * Update to 4.19.0-19
+  * linux-image: Add NEWS for unprivileged eBPF change
+
+ -- Ben Hutchings <benh@debian.org>  Mon, 07 Mar 2022 22:42:37 +0100
+
+linux-latest (105+deb10u13) buster; urgency=medium
+
+  * Update to 4.19.0-18
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 30 Sep 2021 22:34:05 +0200
+
 linux-latest (105+deb10u12+grm2u1) gooroom-2.0; urgency=medium
 
   * Merge 105+deb10u12 into gooroom-2.0
