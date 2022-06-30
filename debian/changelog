@@ -1,3 +1,9 @@
+linux-latest (80+deb9u17) stretch-security; urgency=medium
+
+  * Update to 4.9.0-19
+
+ -- Ben Hutchings <benh@debian.org>  Thu, 30 Jun 2022 22:07:05 +0200
+
 linux-latest (80+deb9u16) stretch-security; urgency=high
 
   * Update to 4.9.0-18
