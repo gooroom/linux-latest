@@ -1,3 +1,15 @@
+linux-latest (105+deb10u18) buster-security; urgency=medium
+
+  * Update to 4.19.0-23
+
+ -- Ben Hutchings <benh@debian.org>  Wed, 21 Dec 2022 01:44:41 +0100
+
+linux-latest (105+deb10u17) buster-security; urgency=medium
+
+  * Update to 4.19.0-22
+
+ -- Ben Hutchings <benh@debian.org>  Fri, 30 Sep 2022 00:47:24 +0200
+
 linux-latest (105+deb10u16) buster-security; urgency=medium
 
   * Update to 4.19.0-21
