@@ -1,3 +1,15 @@
+linux-latest (105+deb10u22+grm2u1) gooroom-2.0; urgency=medium
+
+  * Merge 105+deb10u22 into gooroom-2.0
+
+ -- jongkyung.woo <jkwoo@gooroom.kr>  Thu, 26 Sep 2024 16:29:34 +0900
+
+linux-latest (105+deb10u22) buster-security; urgency=medium
+
+  * Update to 4.19.0-27
+
+ -- Ben Hutchings <benh@debian.org>  Tue, 25 Jun 2024 20:58:45 +0200
+
 linux-latest (105+deb10u21+grm2u1) gooroom-2.0; urgency=medium
 
   * Merge 105+deb10u21 into gooroom-2.0
